@@ -1,7 +1,7 @@
 'use strict';
 
 function getDogImage(dog) {
-    const url = ``
+    const url = `https://dog.ceo/api/breeds/image/random/${dog}`
     fetch(url)
         .then(response => {
             if(response.ok) {
