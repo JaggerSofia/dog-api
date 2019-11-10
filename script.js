@@ -21,7 +21,13 @@ function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
     const dog=$('.number').val();
-    getDogImage(dog);
+    if(dog <= 0){
+      alert('Cannot be less than 0')
+    } else if(dog > 50){
+      alert('Cannot be more than 50')
+    } else {
+      getDogImage(dog);
+    }
   });
 }
 
